@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import CountUp from './CountUp'
+import CountDown from './CountDown'
+import Input from './Input'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  state = {
+    count: 0
+  }
+
+  addOne = () => {
+    this.setState({
+      count: this.state.count + 1
+    })
+  }
+
+  takeAwayOne = () => {
+    this.setState({
+      count: this.state.count - 1
+    })
+  }
+
+  userInput = (number) => {
+    let value = parseInt(number);
+    this.setState({
+      count: this.state.count + value
+    });
+  }
+
+  render() {
+    return (
+      <div className="container">
+        <h1>{this.state.count}</h1>
+        <CountUp addOne={this.addOne} />
+        <CountDown takeAwayOne={this.takeAwayOne} />
+        <Input userInput={this.userInput} />
+      </div>
+    )
+  }
 }
+
 
 export default App;

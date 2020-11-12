@@ -11,3 +11,83 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("./imgs/bg.jpg");
+  background-position: center bottom;
+  background-size: cover;
+}
+
+.container {
+  text-align: center;
+  background-color: rgba(86, 86, 86, 0.3);
+  padding: 100px 100px;
+  border-radius: 7px;
+}
+
+h1 {
+  font-size: 75px;
+  color: #ffffff;
+}
+
+.btns {
+  display: inline-block;
+}
+
+.btn1 , .btn2 {
+  width: 150px;
+  height: 50px;
+  font-size: 18px;
+  border-radius: 7px;
+  outline: none;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.btn1 {
+  margin-right: 20px;
+}
+
+.btn3 {
+  width: 70px;
+  height: 30px;
+  border-radius: 7px;
+  outline: none;
+  margin-left: 25px;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.form-container {
+  margin-top: 30px;
+}
+
+.input {
+  width: 250px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid #ffffff;
+  outline: none;
+  font-size: 18px;
+  color: #ffffff;
+  background-color: transparent;
+  text-align: center;
+}
+
+::placeholder {
+  color: #ccc;
+  font-size: 14px;
+  text-transform: capitalize;
+  text-align: center;
+}
